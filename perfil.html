@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós - DarkFlix</title>
+  <link rel="stylesheet" href="perfil.css">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fonte base */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #000;
+      color: #eee;
+      padding: 0;
+    }
+
+    /* Cabeçalho */
+    .header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .header h1 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #eee;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu .ativo {
+      color: #474747;
+    }
+
+    /* Container do conteúdo */
+    .sobre-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .sobre h2 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .sobre p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .sobre ul {
+      margin: 15px 0 15px 20px;
+    }
+
+    .sobre ul li {
+      margin-bottom: 10px;
+      list-style-type: disc;
+    }
+
+    /* Rodapé */
+    .footer {
+      background-color: #1c1c1c;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #ffffff;
+      font-size: 0.9rem;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 35px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Estilos do menu lateral */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100vh;
+      background-color: #111;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .side-menu a:hover {
+      color: #474747;
+      transform: translateX(5px);
+    }
+
+    /* Animação ao abrir */
+    .side-menu.open {
+      left: 0;
+    }
+
+    /* Animação do botão */
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .banner {
+  background-color: #222;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.banner h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.perfil-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.foto-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.1);
+}
+  </style>
+</head>
+<body>
+
+
+
+  <header class="header">
+    <ul class="nav-menu">
+    <h1><a href="Home.html">DarkFlix</a></h1>
+    <nav>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+      <ul class="nav-menu">
+        <div class="side-menu" id="menu">
+        <li><a href="filmes.html">Filmes</a></li>
+        <li><a href="Contato.html">Contato</a></li>
+        <li><a href="Sobre.html">Sobre</a></li>
+        <li><a href="Login.html">Sair</a></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+<section class="banner">
+
+</section>
+
+  <main class="sobre-container">
+    <section class="sobre">
+      
+      
+
+      
+      
+
+<div class="container">
+  <div class="left">
+    <img src="data:image/jpeg;base64,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" alt="Foto de Perfil" />
+    <div class="nome" id="nomeDisplay">Você</div>
+    <div class="social">
+      <a href="#" title="Twitter" aria-label="Twitter">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.949.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.723 0-4.928 2.205-4.928 4.928 0 .39.045.765.127 1.124C7.69 8.094 4.066 6.13 1.64 3.161c-.427.729-.666 1.577-.666 2.476 0 1.71.87 3.216 2.188 4.099-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.418-1.68 1.318-3.809 2.105-6.102 2.105-.395 0-.779-.023-1.17-.067 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14-7.497 14-13.986 0-.21 0-.423-.015-.633.962-.695 1.8-1.562 2.46-2.549z"/></svg>
+      </a>
+      <a href="#" title="LinkedIn" aria-label="LinkedIn">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.024-3.039-1.852-3.039-1.853 0-2.136 1.445-2.136 2.939v5.669H9.352V9h3.415v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.601 0 4.266 2.368 4.266 5.452v6.291zM5.337 7.433a2.065 2.065 0 11.001-4.13 2.065 2.065 0 01-.001 4.13zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.73v20.538C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.269V1.73C24 .774 23.2 0 22.225 0z"/></svg>
+      </a>
+      <a href="#" title="Facebook" aria-label="Facebook">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.494v-9.294H9.691v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.243l-1.918.001c-1.504 0-1.796.716-1.796 1.766v2.316h3.59l-.467 3.622h-3.123V24h6.116c.73 0 1.324-.593 1.324-1.326V1.326C24 .593 23.407 0 22.675 0z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="right">
+    <button class="btn-editar" id="btnEditar">Editar Perfil</button>
+    <form id="perfilForm">
+      <h3>Informações:</h3>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" disabled />
+
+      <br />
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" disabled />
+
+      <br />
+
+      <label for="localizacao">Localização:</label>
+      <input type="text" id="localizacao" disabled />
+
+      <h3>Sobre:</h3>
+<input type="text" id="sobre" disabled />
+
+      <button type="submit" class="btn-salvar" disabled>Salvar</button>
+    </form>
+  </div>
+</div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 CineMundo. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu(btn) {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+      btn.classList.toggle('open');
+    }
+  </script>
+
+<script src="perfil.js"></script>
+
+</body>
+</html>

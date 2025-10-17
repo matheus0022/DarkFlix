@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-box">
+    <h1>Login</h1>
+    <form id="formLogin">
+  <!-- seus inputs aqui -->
+  <input type="text" id="emailLogin" placeholder="Usuário" required>
+  <br><br>
+  <input type="password" id="senhaLogin" placeholder="Senha" required>
+  <br>
+  <!-- checkbox lembrar-me -->
+  <div class="lembrar-container">
+  <label for="lembrar">Lembrar-me</label><br>
+    <input type="checkbox" id="lembrar" name="lembrar"><br><br>
+</div>
+<button type="submit" class="brilho">Entrar</button>
+<div id="msgErro" style="color: red; margin-top: 10px;"></div>
+
+</form>
+    <div class="links">
+      <label>Não tem uma conta?<a href="Cadastro.html">Cadastre-se</a></label><br>
+      <a href="Recuperar-senha.html">Esqueceu a senha ou nome de usuário?</a>
+    </div>
+  </div>
+  <video autoplay loop poster="./2b-sword-flowers-nier-automata-moewalls-com.mp4"
+  class="video">
+    <source src="2b-sword-flowers-nier-automata-moewalls-com.mp4"
+    type="video/mp4">
+  </video>
+
+  <script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós - DarkFlix</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fonte base */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #000;
+      color: #eee;
+      padding: 0;
+    }
+
+    /* Cabeçalho */
+    .header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .header h1 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #eee;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu .ativo {
+      color: #474747;
+    }
+
+    /* Container do conteúdo */
+    .sobre-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .sobre h2 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .sobre p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .sobre ul {
+      margin: 15px 0 15px 20px;
+    }
+
+    .sobre ul li {
+      margin-bottom: 10px;
+      list-style-type: disc;
+    }
+
+    /* Rodapé */
+    .footer {
+      background-color: #1c1c1c;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #ffffff;
+      font-size: 0.9rem;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 35px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Estilos do menu lateral */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100vh;
+      background-color: #111;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .side-menu a:hover {
+      color: #474747;
+      transform: translateX(5px);
+    }
+
+    /* Animação ao abrir */
+    .side-menu.open {
+      left: 0;
+    }
+
+    /* Animação do botão */
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .banner {
+  background-color: #222;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.banner h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.perfil-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.foto-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.1);
+}
+  </style>
+</head>
+<body>
+
+   <div class="perfil-container">
+  <a href="perfil.html">
+    <img src="data:image/jpeg;base64,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" alt="Perfil" class="foto-perfil">
+  </a>
+</div>
+
+  <header class="header">
+    <ul class="nav-menu">
+    <h1><a href="Home.html">DarkFlix</a></h1>
+    <nav>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+      <ul class="nav-menu">
+        <div class="side-menu" id="menu">
+        <li><a href="filmes.html">Filmes</a></li>
+        <li><a href="Contato.html">Contato</a></li>
+        <li><a href="Sobre.html" class="ativo">Sobre</a></li>
+        <li><a href="Login.html">Sair</a></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+<section class="banner">
+
+</section>
+
+  <main class="sobre-container">
+    <section class="sobre">
+      <h2>Sobre Nós</h2>
+      <p>Bem-vindo ao <strong>DarkFlix</strong> — o seu destino definitivo para tudo sobre cinema!</p>
+
+      <p>Somos apaixonados por filmes, séries e tudo que envolve o universo do entretenimento. Nosso objetivo é conectar fãs do audiovisual com o melhor conteúdo: desde clássicos inesquecíveis até os lançamentos mais aguardados do momento.</p>
+
+      <ul>
+        <li>Catálogo atualizado com milhares de títulos</li>
+        <li>Sinopses, trailers e elencos</li>
+        <li>Críticas, notícias e curiosidades</li>
+        <li>Recomendações personalizadas para todos os gostos</li>
+      </ul>
+
+      <p>Seja você um cinéfilo de carteirinha, alguém em busca de um bom filme para o fim de semana, ou apenas curioso sobre o que está bombando nas telonas e telinhas — o <strong>DarkFlix</strong> é o lugar certo.</p>
+
+      <p>Nosso compromisso é trazer informação de qualidade, com paixão e responsabilidade. Prepare a pipoca e explore o mundo do cinema com a gente!</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 CineMundo. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu(btn) {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+      btn.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

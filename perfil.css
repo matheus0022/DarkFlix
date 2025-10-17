@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #1a1a1a;
+    border-radius: 10px;
+    display: flex;
+    color: #eee;
+    padding: 25px;
+    box-shadow: 0 0 20px #111;
+  }
+  .left {
+    width: 35%;
+    border-right: 1px solid #222;
+    text-align: center;
+    padding-right: 30px;
+  }
+  .left img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #444;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  .left .nome {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #eee;
+  }
+  .left .social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .left .social a {
+    width: 28px;
+    height: 28px;
+    fill: #bbb;
+    transition: fill 0.3s;
+  }
+  .left .social a:hover svg {
+    fill: #eee;
+  }
+  .right {
+    flex-grow: 1;
+    padding-left: 30px;
+    position: relative;
+  }
+  .right h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #eee;
+  }
+  .right label {
+    font-weight: 700;
+    display: inline-block;
+    width: 90px;
+    margin-bottom: 8px;
+    color: #eee;
+  }
+  .right input[type="text"], 
+  .right input[type="email"] {
+    background: #222;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 8px;
+    color: #eee;
+    width: 60%;
+    font-family: monospace;
+  }
+ 
+  
+  .btn-editar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: #eee;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    filter: grayscale(100%);
+  }
+  .btn-editar:hover {
+    background: #555;
+    filter: none;
+  }
+  .btn-salvar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    border: none;
+    border-radius: 6px;
+    color: #eee;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+    filter: grayscale(100%);
+  }
+  .btn-salvar:hover {
+    background: #666;
+    filter: none;
+  }
+  input[disabled], textarea[disabled] {
+    background: #222;
+    color: #888;
+    border: none;
+    cursor: not-allowed;
+  }
+
+
+    /* Cabeçalho */
+    .header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .header h1 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #eee;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu .ativo {
+      color: #474747;
+    }
+
+
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 35px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Estilos do menu lateral */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100vh;
+      background-color: #111;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .side-menu a:hover {
+      color: #474747;
+      transform: translateX(5px);
+    }
+
+    /* Animação ao abrir */
+    .side-menu.open {
+      left: 0;
+    }
+
+    /* Animação do botão */
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }

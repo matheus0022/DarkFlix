@@ -1,0 +1,224 @@
+
+/* Fundo geral */
+body {
+  background-image: url(2a.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Caixa de login com fundo transparente */
+.login-box {
+
+  background-color: rgba(43, 0, 51, 0.1); /* transparência moderada */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(117, 117, 117, 0.3);
+  width: 320px;
+  text-align: center;
+  backdrop-filter: blur(4px); /* efeito vidro */
+  -webkit-backdrop-filter: blur(10px); /* para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* borda sutil */
+}
+
+/* Título */
+.login-box h1 {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Inputs com efeito de brilho */
+.login-box input[type="email"],
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 91.3%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  outline: none;  
+  box-shadow: 0 0 8px #ffffff;
+  transition: 0.3s;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  box-shadow: 0 0 12px #ffffff, 0 0 20px #ffffff;
+  border-color: #656565;
+}
+
+.login-box input::placeholder {
+  color: #383838;
+}
+
+/* Checkbox */
+.login-box input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Botão com brilho contínuo */
+.brilho {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #9b9b9b;
+    transition: background-color 0.6s, box-shadow 0.6s;
+}
+
+.brilho:hover {
+  background-color: rgba(179, 102, 255, 0.1);
+  box-shadow: 0 0 15px #8f8f8f, 0 0 25px #676767, 0 0 35px #7b7b7b;
+}
+
+/* Animação brilho do botão */
+@keyframes brilhoBotao {
+  0% {
+    box-shadow: 0 0 5px #747474;
+  }
+  100% {
+    box-shadow: 0 0 15px #808080, 0 0 30px #7a7a7a;
+  }
+}
+
+/* Links */
+.login-box a {
+  color: #6f6f6f;
+  text-decoration: none;
+    font-size: 14px;
+    transition: text-decoration 0.3s;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+/* Labels */
+.login-box label {
+  font-size: 14px;
+}
+/* Centralização e estilo dos links */
+.login-box .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-box .links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.login-box .links a:hover {
+  color: #757575;
+  text-shadow: 0 0 5px #767676;
+  text-decoration: underline;
+}
+/* Container para centralizar o checkbox dos termos */
+.checkbox-termos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+/* Label com texto acima do checkbox */
+.checkbox-termos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #878787;
+  gap: 6px;
+}
+/* Container dos botões na home */
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Deixa os botões <a> com aparência de botão real */
+.home-buttons a.brilho {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  padding: 12px;
+  border: 2px solid #787878;
+  border-radius: 5px;
+  font-size: 16px;
+  animation: brilhoBotao 2s infinite alternate;
+  box-shadow: 0 0 10px #797979;
+  transition: 0.3s ease;
+}
+
+.home-buttons a.brilho:hover {
+  background-color: rgba(179, 102, 255, 0.1);
+  box-shadow: 0 0 15px #969696, 0 0 25px #828282, 0 0 35px #797979;
+}
+
+/* Estilo especial para o botão "Sair" */
+.home-buttons a.sair {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 10px #ff4d4d;
+}
+
+.home-buttons a.sair:hover {
+  box-shadow: 0 0 20px #ff8080, 0 0 30px #ffb3b3;
+  background-color: rgba(255, 77, 77, 0.1);
+}
+/* Estilo para o container de email na página de recuperação */
+.login-box input[type="email"]:focus {
+  box-shadow: 0 0 12px #e6ccff, 0 0 20px #cc80ff;
+  border-color: #e6ccff;
+}
+ /* Container para o home */
+ .home-container {
+ background-color: rgba(43, 0, 51, 0.1); /* transparência moderada */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(128, 0, 128, 0.3);
+  text-align: center;
+  backdrop-filter: blur(10px); /* efeito vidro */
+  -webkit-backdrop-filter: blur(10px); /* para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* borda sutil */
+}
+.video {
+position: absolute;
+right: auto;
+min-width: 101%;
+min-height: 101%;
+width: 0;
+height: 0;
+z-index: -100
+}
